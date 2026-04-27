@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Para Sayuri ❤️</title>
+
+<style>
+body {
+  background: linear-gradient(to right, #ffd1dc, #ffe6f0);
+  font-family: Arial;
+  text-align: center;
+  padding: 40px;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  max-width: 400px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #ff6f91;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #ff4d6d;
+}
+
+.fade {
+  animation: fade 0.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Para você, Sayuri 💖</h1>
+
+<p id="texto">Eu tenho uma coisinha pra te mostrar...</p>
+
+<button onclick="proximo()">Clique aqui 💌</button>
+
+<div id="opcoes" style="display:none;">
+  <p>Você sabe o quanto eu gosto de você? 😳</p>
+  <button onclick="caminho1()">Sei sim ❤️</button>
+  <button onclick="caminho2()">Talvez 🤔</button>
+</div>
+
+</div>
+
+<script>
+
+let etapa = 0;
+
+function proximo() {
+  let texto = document.getElementById("texto");
+
+  if (etapa === 0) {
+    texto.innerHTML = "Desde que você apareceu, tudo ficou mais leve 💕";
+  } 
+  else if (etapa === 1) {
+    texto.innerHTML = "Eu gosto de cada detalhe seu... até das coisinhas pequenas ✨";
+  } 
+  else if (etapa === 2) {
+    texto.innerHTML = "E eu quis fazer isso aqui só pra te ver sorrir 😊";
+  } 
+  else if (etapa === 3) {
+    document.getElementById("opcoes").style.display = "block";
+  }
+
+  etapa++;
+  texto.classList.add("fade");
+}
+
+function caminho1() {
+  document.getElementById("texto").innerHTML =
+  "Então deixa eu te lembrar mais uma vez... eu gosto MUITO de você 💖🥺";
+}
+
+function caminho2() {
+  document.getElementById("texto").innerHTML =
+  "Então eu vou te provar aos poucos... porque você merece isso 💕✨";
+}
+
+</script>
+
+</body>
+</htm
